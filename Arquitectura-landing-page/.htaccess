@@ -1,0 +1,17 @@
+# Activa el motor de reescritura
+RewriteEngine On
+
+# Quitar .html de la URL (sirve el archivo si existe con .html)
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^([^/]+)$ $1.html [L]
+
+# Redirigir de example.html → /example (quita el .html visible)
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,}\s/+(.+?)\.html\sHTTP
+RewriteRule ^ %1 [R=301,L]
+
+# Redirigir /index.html → /
+RewriteCond %{THE_REQUEST} /index\.html
+RewriteRule ^index\.html$ / [R=301,L]
+
+# Cargar index.html automáticamente sin mostrarlo
+DirectoryIndex index.html

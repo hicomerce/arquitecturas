@@ -1,0 +1,55 @@
+
+├── nombreLanding -- Página principal (index.html)
+│ └── index.html -- Landing con rutas limpias (sin .html)
+├── gracias
+│ └── index.html -- Página de agradecimiento
+├── components
+│ ├── header.html -- Encabezado modular (cargado dinámicamente)
+│ └── footer.html -- Footer modular (cargado dinámicamente)
+├── assets
+│ ├── images -- Imágenes del sitio
+│ ├── fonts -- Fuentes personalizadas o descargadas
+│ ├── styles
+│ │ ├── main.css -- Estilos base comunes a todas las marcas
+│ │ └── personalizados.css -- Estilos propios de la landing actual
+│ └── scripts
+│ ├── main.js -- Script principal (headerfooter dinámicos, funcionalidades)
+│ └── scripts-terceros.js -- Scripts externos (Google Tag, Meta Pixel, reCAPTCHA, etc.)
+├── .htaccess -- Limpieza de URLs (sin .html)
+
+main.css
+Este archivo contiene
+
+Estilos base como reset, box-sizing, márgenes, clamp() en fuentes y layout.
+
+Variables globales en root (colores, fuentes).
+
+Importación de Google Fonts con @import url(...).
+
+Estilos reutilizables de componentes como botones, containers, grids, etc.
+
+personalizados.css
+Aquí se agregan únicamente estilos propios de la landing actual.
+
+Se recomienda usar las clases HTML ya definidas en la estructura del DOM para sobreescribir o extender estilos sin romper el main.css.
+
+Google Fonts
+Todos los Google Fonts deben estar dentro de main.css mediante @import
+
+Por qué esta estructura
+Permite que herramientas como IA (ChatGPT, Copilot, etc.) lean el main.css y entiendan cómo están nombradas y estructuradas las clases CSS.
+
+Permite construir secciones nuevas automáticamente con clases ya listas para usarse.
+
+Mantiene escalabilidad al dividir entre lo común (main.css) y lo específico (personalizados.css).
+
+Recomendaciones finales
+Siempre que empieces una nueva landing
+
+Duplica la estructura base de arquitectura-landing-page.
+
+Copia el main.css de la marca que estés trabajando (Hicomerce, otra).
+
+Crea tus estilos extra en personalizados.css.
+
+Los scripts de terceros van en scripts-terceros.js, que debe ir en script async src=... en el head.

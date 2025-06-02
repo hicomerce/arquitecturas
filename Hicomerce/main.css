@@ -1,0 +1,279 @@
+a.btn{
+    width: 135px;}
+button{
+    width: 155px;}
+a.btn, button{
+    color: var(--textoBlanco);
+    text-align: center;
+    border-radius: 5px;
+    border: 0px;
+    background-color: var(--naranja);
+    display: inline-block;
+}
+a.btn, button, label, input, textarea, select{
+    padding: 10px;
+}
+textarea{
+    margin-top: 7px;
+}
+input, select{
+    margin-top: 5px;
+}
+label, input, textarea, select, option{
+    color: var(--inputsColor);
+}
+input, textarea, select{
+    border-color: var(--borderColor);
+    border-radius: 5px;
+    border-width: 1px;
+    border-style: solid;
+}
+input:focus, textarea:focus, select:focus{
+    background-color: var(--inputsActivo);
+    outline-width: 1px;
+    outline-color: var(--borderColor);
+    outline-style: solid;
+    border: 1px var(--borderColor);
+}
+
+input:hover, textarea:hover, select:hover{
+    outline-width: 2px;
+    outline-color: var(--borderColor);
+    outline-style: solid;
+    border: 1px var(--borderColor);
+    transition: 0s;
+}
+
+input:disabled, textarea:disabled, select:disabled,
+input:disabled:hover, textarea:disabled:hover, select:disabled:hover{
+    background-color: var(--inputsDisabled);
+    outline-width: 1px;
+    outline-color: var(--borderColor);
+    outline-style: solid;
+    border: 1px var(--borderColor);
+
+    color: var(--inputsTxtDisabled);
+}
+label.disabled{
+    color: var(--inputsDisabled);
+}
+
+a.btn:hover, button:hover{
+    background-color: var(--azul);
+    cursor: pointer;
+}
+
+a.btn.secundario, button.secundario{
+    background-color: white;
+    border: 1px solid var(--azul);
+    color: var(--azulFuerte);
+}
+a.btn.secundario:hover, button.secundario:hover{
+    border: 1px solid var(--textoNegro);
+    color: var(--textoNegro);
+}
+
+button:disabled, button.secundario:disabled, button.secundario:disabled:hover, button:disabled:hover,
+a.deshabilitado, a.btn.deshabilitado.secundario, a.deshabilitado:hover, a.btn.secundario.deshabilitado:hover{
+    background-color: var(--deshabilitado);
+    color: var(--textoDeshabilitado);
+    border: none;
+}
+button:disabled, button.secundario:disabled, button.secundario:disabled:hover, button:disabled:hover,
+a.deshabilitado, a.btn.deshabilitado.secundario, a.deshabilitado:hover, a.btn.secundario.deshabilitado:hover, input:disabled, textarea:disabled, select:disabled, label.disabled{
+    cursor: no-drop;
+}
+
+.card {
+    background: white;
+    filter: drop-shadow(-4px 0px 21px lightgray);
+}
+.card:hover {
+    background: white;
+    filter: drop-shadow(4px 0px 4px lightgray);
+}
+
+form.enviado input:valid, form.enviado select:valid, form.enviado textarea:valid {
+    border: 2px solid var(--borderValid);
+    background-color: var(--inputValid);
+}
+
+form.enviado input:invalid, form.enviado select:invalid, form.enviado textarea:invalid {
+    border: 2px solid var(--borderInValid);
+    background-color: var(--inputInValid);
+}
+
+.BGAzulCielo{
+    background-color: var(--azulCielo);
+}
+.BGAzulMarca{
+    background-color: var(--azul);
+}
+.BGNegro{
+    background-color: black;
+}
+.BGNegro, .BGAzulMarca{
+    color: var(--textoBlanco);
+}
+section{
+    max-width: 1440px;
+}
+
+.CBlanco{
+    color: var(--textoBlanco);
+}
+.CNegro{
+    color: var(--textoNegro);
+}
+
+
+/* Para activar los font size pasando los 1200px se ajusta su valor mayor, y se unan las media queries para ajustar tamaños reales en mobile
+y desktop */
+
+.fontSizeDesk80Mob36, .fontSizeDesk48Mob32, .fontSizeDesk48Mob28, .fontSizeDesk36Mob28, .fontSizeDesk30Mob24, .fontSizeDesk48Mob48, .fontSizeDesk36Mob36, 
+.fontSizeDesk36Mob32, .fontSizeDesk30Mob28, h1, h2 {
+  font-weight: bold;
+}
+
+
+.fontSizeDesk48Mob48 {
+  font-size: 48px;
+}
+
+.fontSizeDesk36Mob36 {
+  font-size: 36px;
+}
+
+.fontSizeDesk36Mob32 {
+  font-size: clamp(32px, 3vw, 36px);
+}
+
+.fontSizeDesk30Mob28 {
+  font-size: clamp(28px, 2.5vw, 30px);
+}
+
+
+.fontSizeDesk24Mob24 {
+  font-size: 24px;
+}
+
+.fontSizeDesk24Mob20 {
+  font-size: clamp(20px, 2vw, 24px);
+}
+
+.fontSizeDesk20Mob20 {
+  font-size: 20px;
+}
+
+.fontSizeDesk20Mob18 {
+  font-size: clamp(18px,1.5vw + 2px, 20px);
+}
+
+.fontSizeDesk18Mob18 {
+  font-size: 18px;
+}
+
+.fontSizeDesk16Mob16 {
+  font-size: 16px;
+}
+
+.fontSizeDesk14Mob14 {
+  font-size: 14px;
+}
+
+.fontSizeDesk12Mob12 {
+  font-size: 12px;
+}
+
+
+@media (min-width:768px) {
+  .fontSizeDesk30Mob24 { font-size: clamp(24px, 2.5vw, 30px); }
+  .fontSizeDesk36Mob28 { font-size: clamp(28px, 3vw, 36px); }
+  .fontSizeDesk48Mob28 { font-size: clamp(28px, 4vw, 48px); }
+  .fontSizeDesk48Mob32 { font-size: clamp(32px, 4vw, 48px); }
+  .fontSizeDesk80Mob36 { font-size: clamp(36px, 6vw + 8px, 80px); }
+  .fontSizeDesk24Mob18 { font-size: clamp(18px, 2vw, 24px); }
+  .fontSizeDesk24Mob16 { font-size: clamp(16px, 2vw, 24px); }
+  .fontSizeDesk20Mob16 { font-size: clamp(16px, 1.5vw + 2px, 20px); }
+}
+
+@media (max-width:768px) {
+  .fontSizeDesk30Mob24 { font-size: 24px; }
+  .fontSizeDesk36Mob28 { font-size: 28px; }
+  .fontSizeDesk48Mob28 { font-size: 28px; }
+  .fontSizeDesk48Mob32 { font-size: 32px; }
+  .fontSizeDesk80Mob36 { font-size: 36px; }
+  .fontSizeDesk24Mob18 { font-size: 18px; }
+  .fontSizeDesk24Mob16 { font-size: 16px; }
+  .fontSizeDesk20Mob16 { font-size: 16px; }
+}
+
+@media (min-width:768px){
+    .marginDesk0{margin: 0px;}
+    .marginDesk48{margin: 48px;}
+    .marginDeskAuto{margin: auto;}
+    .marginDesk0Auto{margin: 0px auto;}
+    .marginDesk48Auto{margin: 48px auto;}
+    .displayFlexDesk{display: flex;}
+    .flexWrapDesk{flex-wrap: wrap;}
+    .directionRowDesk{flex-direction: row;}
+    .directionColumDesk{flex-direction: column;}
+    .directionRowReverseDesk{flex-direction: row-reverse;}
+    .directionColumReverseDesk{flex-direction: column-reverse;}
+}
+
+@media (max-width:768px){
+    .marginMobile0{margin: 0px;}
+    .marginMobile48{margin: 48px;}
+    .marginMobileAuto{margin: auto;}
+    .marginMobile0Auto{margin: 0px auto;}
+    .marginMobile48Auto{margin: 48px auto;}
+    .displayFlexDesk{display: flex;}
+    .flexWrapDesk{flex-wrap: wrap;}
+    .directionRowDesk{flex-direction: row;}
+    .directionColumDesk{flex-direction: column;}
+    .directionRowReverseDesk{flex-direction: row-reverse;}
+    .directionColumReverseDesk{flex-direction: column-reverse;}
+}
+
+
+:root{
+    --naranja: #FF3B00; /* Color de marca*/
+    --azul: #02ABE7;  /* Color de marca*/
+    --azulCielo: #E6EFFA;  /* Color de marca*/
+    --morado: #9b9af3;  /* Color de marca*/
+    --textoBlanco: #F0F0F0;
+    --textoNegro: #2B2B2B; /* Color general*/
+    --deshabilitado: #E9E9E9;
+    --textoDeshabilitado: #D6D6D6;
+    --azulFuerte: #020E38;
+    --borderColor: #575757;
+    --inputsColor: #231F20;
+    --inputsActivo: #E9F4FF;
+    --inputsDisabled: #DBDBDB;
+    --inputsTxtDisabled: #BEBEBE;
+    --borderValid: #005531;
+    --inputValid: #C1FFE0;
+    --borderInValid: #F70000;
+    --inputInValid: #FFE8E7;
+    --fontFamilyAlbert: "Albert Sans", sans-serif;
+    --negroFooter:#141414;
+}
+
+*{
+    line-height: normal;
+    font-weight: 400;
+    padding: 0px;
+    margin: 0px;
+    position: relative;
+    transition: 0.5s;
+    text-decoration: none;
+    font-family: var(--fontFamilyAlbert);
+    color: var(--textoNegro);
+    font-size: 16px;
+}
+*:hover{
+    transition: 0.5s;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&display=swap');
